@@ -1,0 +1,16 @@
+{
+  "name": "school-management-system",
+  "version": "1.0.0",
+  "description": "A web application for managing school operations, including functionalities for admin, teachers, students, and parents.",
+  "main": "src/js/app.js",
+  "scripts": {
+    "start": "live-server src",
+    "test": "echo \"No tests specified\" && exit 0"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "live-server": "^1.2.1"
+  },
+  "author": "Your Name",
+  "license": "MIT"
+}

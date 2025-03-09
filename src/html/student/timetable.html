@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable - Student Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body class="bg-light">
+    <div class="dashboard-container">
+        <!-- Student Sidebar -->
+        <aside class="sidebar bg-info">
+            <div class="sidebar-header">
+                <i class="fas fa-user-graduate text-light fa-2x"></i>
+                <h4 class="text-light ms-2">Student Portal</h4>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="courses.html">
+                            <i class="fas fa-book"></i> My Courses
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="assignments.html">
+                            <i class="fas fa-tasks"></i> Assignments
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="grades.html">
+                            <i class="fas fa-star"></i> Grades
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="attendance.html">
+                            <i class="fas fa-calendar-check"></i> Attendance
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="timetable.html">
+                            <i class="fas fa-clock"></i> Timetable
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+                <div class="container-fluid">
+                    <button class="btn btn-link sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown">
+                            <button class="btn btn-link dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown">
+                                <i class="fas fa-user-circle fa-lg"></i>
+                                <span class="ms-2">John Doe</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#profile"><i class="fas fa-user me-2"></i>Profile</a></li>
+                                <li><a class="dropdown-item" href="#settings"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="../index.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Timetable Content -->
+            <div class="container-fluid py-4">
+                <!-- Page Header -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h1 class="h3 mb-0">Class Timetable</h1>
+                            <div class="d-flex gap-2">
+                                <button class="btn btn-info">
+                                    <i class="fas fa-download me-2"></i>Download Schedule
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weekly Timetable -->
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table table-bordered text-center">
+                                <thead class="bg-light">
+                                    <tr>
+                                        <th>Time</th>
+                                        <th>Monday</th>
+                                        <th>Tuesday</th>
+                                        <th>Wednesday</th>
+                                        <th>Thursday</th>
+                                        <th>Friday</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="bg-light">8:00 - 9:00</td>
+                                        <td class="bg-info text-white">Mathematics<br>Room 101</td>
+                                        <td class="bg-success text-white">Science<br>Lab 201</td>
+                                        <td class="bg-warning text-dark">English<br>Room 102</td>
+                                        <td class="bg-danger text-white">Physics<br>Lab 202</td>
+                                        <td class="bg-primary text-white">History<br>Room 103</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bg-light">9:00 - 10:00</td>
+                                        <td class="bg-success text-white">Science<br>Lab 201</td>
+                                        <td class="bg-info text-white">Mathematics<br>Room 101</td>
+                                        <td class="bg-danger text-white">Physics<br>Lab 202</td>
+                                        <td class="bg-warning text-dark">English<br>Room 102</td>
+                                        <td class="bg-primary text-white">History<br>Room 103</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="bg-light">10:00 - 10:15</td>
+                                        <td colspan="5" class="bg-secondary text-white">Break</td>
+                                    </tr>
+                                    <!-- Add more time slots -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Today's Schedule -->
+                <div class="card">
+                    <div class="card-header">
+                        <h5 class="card-title mb-0">Today's Schedule</h5>
+                    </div>
+                    <div class="card-body">
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <div class="d-flex w-100 justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="mb-1">Mathematics</h6>
+                                        <p class="mb-1 text-muted">8:00 AM - 9:00 AM</p>
+                                        <small>Room 101 | Prof. John Smith</small>
+                                    </div>
+                                    <span class="badge bg-info">Current</span>
+                                </div>
+                            </div>
+                            <div class="list-group-item">
+                                <div class="d-flex w-100 justify-content-between align-items-center">
+                                    <div>
+                                        <h6 class="mb-1">Science</h6>
+                                        <p class="mb-1 text-muted">9:00 AM - 10:00 AM</p>
+                                        <small>Lab 201 | Prof. Sarah Wilson</small>
+                                    </div>
+                                    <span class="badge bg-secondary">Upcoming</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/dashboard.js"></script>
+</body>
+</html>

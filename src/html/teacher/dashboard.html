@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teacher Dashboard - School Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body class="bg-light">
+    <div class="dashboard-container">
+        <!-- Teacher Sidebar -->
+        <aside class="sidebar bg-success">
+            <div class="sidebar-header">
+                <i class="fas fa-chalkboard-teacher text-light fa-2x"></i>
+                <h4 class="text-light ms-2">Teacher Portal</h4>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#dashboard">
+                            <i class="fas fa-tachometer-alt"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="classes.html">
+                            <i class="fas fa-chalkboard"></i> My Classes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="attendance.html">
+                            <i class="fas fa-clipboard-check"></i> Attendance
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="grades.html">
+                            <i class="fas fa-star"></i> Grades
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="assignments.html">
+                            <i class="fas fa-tasks"></i> Assignments
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="reports.html">
+                            <i class="fas fa-chart-bar"></i> Reports
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="messages.html">
+                            <i class="fas fa-envelope"></i> Messages
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+                <div class="container-fluid">
+                    <button class="btn btn-link sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown">
+                            <button class="btn btn-link dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown">
+                                <i class="fas fa-user-circle fa-lg"></i>
+                                <span class="ms-2">Prof. John Smith</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#profile"><i class="fas fa-user me-2"></i>Profile</a></li>
+                                <li><a class="dropdown-item" href="#settings"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="../index.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Dashboard Content -->
+            <div class="container-fluid py-4">
+                <!-- Quick Stats -->
+                <div class="row g-4 mb-4">
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card stat-card bg-success text-white h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Active Classes</h5>
+                                <h2 class="display-4">5</h2>
+                                <p class="card-text">Currently teaching</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card stat-card bg-primary text-white h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Total Students</h5>
+                                <h2 class="display-4">125</h2>
+                                <p class="card-text">In all classes</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card stat-card bg-warning text-white h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Pending Tasks</h5>
+                                <h2 class="display-4">8</h2>
+                                <p class="card-text">Assignments to grade</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <div class="card stat-card bg-info text-white h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Messages</h5>
+                                <h2 class="display-4">12</h2>
+                                <p class="card-text">Unread messages</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Today's Schedule -->
+                <div class="row mb-4">
+                    <div class="col-md-8">
+                        <div class="card h-100">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <h5 class="card-title mb-0">Today's Schedule</h5>
+                                <button class="btn btn-sm btn-outline-success">
+                                    <i class="fas fa-plus me-1"></i> Add Class
+                                </button>
+                            </div>
+                            <div class="card-body p-0">
+                                <div class="table-responsive">
+                                    <table class="table mb-0">
+                                        <thead class="table-light">
+                                            <tr>
+                                                <th>Time</th>
+                                                <th>Class</th>
+                                                <th>Subject</th>
+                                                <th>Room</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td>08:00 - 09:30</td>
+                                                <td>Class 10-A</td>
+                                                <td>Mathematics</td>
+                                                <td>Room 101</td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-success">Start</button>
+                                                    <button class="btn btn-sm btn-outline-primary">Details</button>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td>10:00 - 11:30</td>
+                                                <td>Class 11-B</td>
+                                                <td>Physics</td>
+                                                <td>Room 203</td>
+                                                <td>
+                                                    <button class="btn btn-sm btn-success">Start</button>
+                                                    <button class="btn btn-sm btn-outline-primary">Details</button>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card h-100">
+                            <div class="card-header">
+                                <h5 class="card-title mb-0">Recent Activities</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="activity-feed">
+                                    <div class="activity-item">
+                                        <span class="text-primary"><i class="fas fa-upload me-2"></i>Posted assignments</span>
+                                        <small class="text-muted d-block">Class 10-A • 2 hours ago</small>
+                                    </div>
+                                    <div class="activity-item">
+                                        <span class="text-success"><i class="fas fa-check-circle me-2"></i>Marked attendance</span>
+                                        <small class="text-muted d-block">Class 11-B • 3 hours ago</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/dashboard.js"></script>
+</body>
+</html>

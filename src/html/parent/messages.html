@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages - Parent Portal</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="stylesheet" href="../../css/dashboard.css">
+</head>
+<body class="bg-light">
+    <div class="dashboard-container">
+        <!-- Parent Sidebar -->
+        <aside class="sidebar bg-primary">
+            <div class="sidebar-header">
+                <i class="fas fa-user-friends text-light fa-2x"></i>
+                <h4 class="text-light ms-2">Parent Portal</h4>
+            </div>
+            <nav class="sidebar-nav">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="dashboard.html">
+                            <i class="fas fa-tachometer-alt"></i> Dashboard
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="children.html">
+                            <i class="fas fa-users"></i> My Children
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="attendance.html">
+                            <i class="fas fa-calendar-check"></i> Attendance
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="progress.html">
+                            <i class="fas fa-chart-line"></i> Academic Progress
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="fees.html">
+                            <i class="fas fa-money-bill"></i> Fees & Payments
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="messages.html">
+                            <i class="fas fa-envelope"></i> Messages
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+                <div class="container-fluid">
+                    <button class="btn btn-link sidebar-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <div class="d-flex align-items-center">
+                        <div class="dropdown">
+                            <button class="btn btn-link dropdown-toggle" type="button" id="userDropdown" data-bs-toggle="dropdown">
+                                <i class="fas fa-user-circle fa-lg"></i>
+                                <span class="ms-2">Mr. Robert Smith</span>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#profile"><i class="fas fa-user me-2"></i>Profile</a></li>
+                                <li><a class="dropdown-item" href="#settings"><i class="fas fa-cog me-2"></i>Settings</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="../index.html"><i class="fas fa-sign-out-alt me-2"></i>Logout</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Messages Content -->
+            <div class="container-fluid py-4">
+                <!-- Page Header -->
+                <div class="row mb-4">
+                    <div class="col-12">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <h1 class="h3 mb-0">Messages</h1>
+                            <button class="btn btn-primary">
+                                <i class="fas fa-plus me-2"></i>New Message
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Messages Interface -->
+                <div class="row">
+                    <!-- Message List -->
+                    <div class="col-md-4 mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Search messages...">
+                                    <button class="btn btn-outline-primary">
+                                        <i class="fas fa-search"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action active">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Mrs. Johnson (Math Teacher)</h6>
+                                        <small>3 mins ago</small>
+                                    </div>
+                                    <p class="mb-1">Regarding John's Math Performance...</p>
+                                    <small class="text-muted">Unread</small>
+                                </a>
+                                <a href="#" class="list-group-item list-group-item-action">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <h6 class="mb-1">Principal Williams</h6>
+                                        <small>2 days ago</small>
+                                    </div>
+                                    <p class="mb-1">Parent-Teacher Meeting Schedule</p>
+                                    <small class="text-muted">Read</small>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Message Content -->
+                    <div class="col-md-8 mb-4">
+                        <div class="card">
+                            <div class="card-header">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <div>
+                                        <h5 class="card-title mb-0">Mrs. Johnson (Math Teacher)</h5>
+                                        <small class="text-muted">RE: John's Math Performance</small>
+                                    </div>
+                                    <div>
+                                        <button class="btn btn-outline-primary btn-sm me-2">
+                                            <i class="fas fa-reply me-1"></i>Reply
+                                        </button>
+                                        <button class="btn btn-outline-danger btn-sm">
+                                            <i class="fas fa-trash me-1"></i>Delete
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div class="message-content mb-4">
+                                    <div class="d-flex justify-content-between mb-2">
+                                        <strong>From: Mrs. Johnson</strong>
+                                        <small class="text-muted">March 8, 2024 10:30 AM</small>
+                                    </div>
+                                    <p>Dear Mr. Smith,</p>
+                                    <p>I wanted to discuss John's recent performance in Mathematics class. He's shown significant improvement in algebra, but there are some areas where he might need additional support.</p>
+                                    <p>Would you be available for a brief meeting this week to discuss this in detail?</p>
+                                    <p>Best regards,<br>Mrs. Johnson</p>
+                                </div>
+
+                                <!-- Reply Form -->
+                                <div class="reply-form">
+                                    <h6 class="mb-3">Write a Reply</h6>
+                                    <div class="mb-3">
+                                        <textarea class="form-control" rows="4" placeholder="Type your message here..."></textarea>
+                                    </div>
+                                    <div class="d-flex justify-content-end">
+                                        <button class="btn btn-primary">
+                                            <i class="fas fa-paper-plane me-2"></i>Send Reply
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../../js/dashboard.js"></script>
+</body>
+</html>
